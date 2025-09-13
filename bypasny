@@ -27,7 +27,6 @@ local function setup(char)
             end
         end
 
-        
         if isBeton then
             humanoid.Health = humanoid.MaxHealth
         end
@@ -53,7 +52,7 @@ local function createUI()
     local Frame = Instance.new("Frame")
     Frame.Size = UDim2.new(0,180,0,100)
     Frame.Position = UDim2.new(0.05,0,0.05,0)
-    Frame.BackgroundColor3 = Color3.fromRGB(35,35,35)
+    Frame.BackgroundColor3 = Color3.fromRGB(20,20,20) -- hitam abu gelap
     Frame.BorderSizePixel = 0
     Frame.Active = true
     Frame.Draggable = true
@@ -63,24 +62,22 @@ local function createUI()
     UICorner.CornerRadius = UDim.new(0,10)
     UICorner.Parent = Frame
 
-    
     local Label = Instance.new("TextLabel")
     Label.Size = UDim2.new(1,-10,0,25)
     Label.Position = UDim2.new(0,5,0,5)
     Label.BackgroundTransparency = 1
-    Label.TextColor3 = Color3.fromRGB(200,200,255)
+    Label.TextColor3 = Color3.fromRGB(255,255,255) -- putih bersih
     Label.Font = Enum.Font.GothamBold
     Label.TextSize = 16
-    Label.Text = "WataX"
+    Label.Text = "SUCKARDY" -- ganti
     Label.Parent = Frame
 
-    
     local AnimBtn = Instance.new("TextButton")
     AnimBtn.Size = UDim2.new(1,-10,0,30)
     AnimBtn.Position = UDim2.new(0,5,0,35)
-    AnimBtn.BackgroundColor3 = Color3.fromRGB(60,60,60)
+    AnimBtn.BackgroundColor3 = Color3.fromRGB(40,40,40) -- abu netral
     AnimBtn.BorderSizePixel = 0
-    AnimBtn.TextColor3 = Color3.fromRGB(255,255,255)
+    AnimBtn.TextColor3 = Color3.fromRGB(220,220,220)
     AnimBtn.Font = Enum.Font.GothamBold
     AnimBtn.TextSize = 14
     AnimBtn.Text = "BYPASS: ON"
@@ -94,20 +91,19 @@ local function createUI()
         isActive = not isActive
         if isActive then
             AnimBtn.Text = "BYPASS: ON"
-            AnimBtn.BackgroundColor3 = Color3.fromRGB(60,60,60)
+            AnimBtn.BackgroundColor3 = Color3.fromRGB(40,40,40)
         else
             AnimBtn.Text = "BYPASS: OFF"
-            AnimBtn.BackgroundColor3 = Color3.fromRGB(150,50,50)
+            AnimBtn.BackgroundColor3 = Color3.fromRGB(100,0,0) -- merah gelap
         end
     end)
 
-    
     local BetonBtn = Instance.new("TextButton")
     BetonBtn.Size = UDim2.new(1,-10,0,30)
     BetonBtn.Position = UDim2.new(0,5,0,70)
-    BetonBtn.BackgroundColor3 = Color3.fromRGB(50,50,120)
+    BetonBtn.BackgroundColor3 = Color3.fromRGB(30,30,30) -- abu hitam
     BetonBtn.BorderSizePixel = 0
-    BetonBtn.TextColor3 = Color3.fromRGB(255,255,255)
+    BetonBtn.TextColor3 = Color3.fromRGB(220,220,220)
     BetonBtn.Font = Enum.Font.GothamBold
     BetonBtn.TextSize = 14
     BetonBtn.Text = "KEBAL: OFF"
@@ -121,16 +117,15 @@ local function createUI()
         isBeton = not isBeton
         if isBeton then
             BetonBtn.Text = "KEBAL: ON"
-            BetonBtn.BackgroundColor3 = Color3.fromRGB(50,120,50)
+            BetonBtn.BackgroundColor3 = Color3.fromRGB(0,80,0) -- hijau gelap
         else
             BetonBtn.Text = "KEBAL: OFF"
-            BetonBtn.BackgroundColor3 = Color3.fromRGB(50,50,120)
+            BetonBtn.BackgroundColor3 = Color3.fromRGB(30,30,30)
         end
     end)
 end
 
 createUI()
-
 
 player.CharacterAdded:Connect(function(char)
     wait(0.5)
@@ -139,4 +134,4 @@ player.CharacterAdded:Connect(function(char)
     end
 end)
 
-print("✅ WataX Anim + BETON siap, UI persistent")
+print("✅ SUCKARDY Anim + BETON siap, UI tema gelap")

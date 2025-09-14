@@ -15,5 +15,5 @@ if not allowedUsernames[player.Name] then
 end
 
 -- ✅ Kalau lolos lock, jalanin script utama
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aditpacked/SKYAHAIUKV2/refs/heads/main/YahayuWalkV2.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aditpacked/SKYAHAIUKV2/refs/heads/main/yahayukrrvisi"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aditpacked/SKYAHAIUKV2/refs/heads/main/bypasny"))()

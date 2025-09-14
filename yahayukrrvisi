@@ -6762,14 +6762,14 @@ end
 
 
 local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "WataXReplay"
+screenGui.Name = "SUCKARDYReplay"
 screenGui.ResetOnSpawn = false
 screenGui.Parent = game.CoreGui
 
 local frame = Instance.new("Frame",screenGui)
 frame.Size = UDim2.new(0,280,0,180)
 frame.Position = UDim2.new(0.5,-140,0.5,-90)
-frame.BackgroundColor3 = Color3.fromRGB(35,35,40)
+frame.BackgroundColor3 = Color3.fromRGB(20,20,20) -- dark
 frame.Active = true
 frame.Draggable = true
 frame.BackgroundTransparency = 0.05
@@ -6777,8 +6777,8 @@ Instance.new("UICorner", frame).CornerRadius = UDim.new(0,12)
 
 local title = Instance.new("TextLabel",frame)
 title.Size = UDim2.new(1,0,0,32)
-title.Text = "WataX Menu"
-title.BackgroundColor3 = Color3.fromRGB(55,55,65)
+title.Text = "SUCKARDY Menu"
+title.BackgroundColor3 = Color3.fromRGB(30,30,30) -- dark
 title.TextColor3 = Color3.fromRGB(255,255,255)
 title.Font = Enum.Font.GothamBold
 title.TextScaled = true
@@ -6788,8 +6788,8 @@ local startCP = Instance.new("TextButton",frame)
 startCP.Size = UDim2.new(0.5,-7,0,42)
 startCP.Position = UDim2.new(0,5,0,44)
 startCP.Text = "Start CP"
-startCP.BackgroundColor3 = Color3.fromRGB(60,200,80)
-startCP.TextColor3 = Color3.fromRGB(255,255,255)
+startCP.BackgroundColor3 = Color3.fromRGB(40,40,40) -- dark
+startCP.TextColor3 = Color3.fromRGB(220,220,220)
 startCP.Font = Enum.Font.GothamBold
 startCP.TextScaled = true
 Instance.new("UICorner", startCP).CornerRadius = UDim.new(0,10)
@@ -6799,7 +6799,7 @@ local stopBtn = Instance.new("TextButton",frame)
 stopBtn.Size = UDim2.new(0.5,-7,0,42)
 stopBtn.Position = UDim2.new(0.5,2,0,44)
 stopBtn.Text = "Stop"
-stopBtn.BackgroundColor3 = Color3.fromRGB(220,70,70)
+stopBtn.BackgroundColor3 = Color3.fromRGB(100,0,0) -- merah gelap
 stopBtn.TextColor3 = Color3.fromRGB(255,255,255)
 stopBtn.Font = Enum.Font.GothamBold
 stopBtn.TextScaled = true
@@ -6810,19 +6810,18 @@ local startAll = Instance.new("TextButton",frame)
 startAll.Size = UDim2.new(1,-10,0,42)
 startAll.Position = UDim2.new(0,5,0,96)
 startAll.Text = "Start To End"
-startAll.BackgroundColor3 = Color3.fromRGB(70,120,220)
-startAll.TextColor3 = Color3.fromRGB(255,255,255)
+startAll.BackgroundColor3 = Color3.fromRGB(40,40,40) -- dark
+startAll.TextColor3 = Color3.fromRGB(220,220,220)
 startAll.Font = Enum.Font.GothamBold
 startAll.TextScaled = true
 Instance.new("UICorner", startAll).CornerRadius = UDim.new(0,10)
 startAll.MouseButton1Click:Connect(runAllRoutes)
 
-
 local closeBtn = Instance.new("TextButton", frame)
 closeBtn.Size = UDim2.new(0,30,0,30)
 closeBtn.Position = UDim2.new(0,0,0,0)
 closeBtn.Text = "✖"
-closeBtn.BackgroundColor3 = Color3.fromRGB(220,60,60)
+closeBtn.BackgroundColor3 = Color3.fromRGB(120,0,0) -- merah gelap
 closeBtn.TextColor3 = Color3.fromRGB(255,255,255)
 closeBtn.Font = Enum.Font.GothamBold
 closeBtn.TextScaled = true
@@ -6831,12 +6830,11 @@ closeBtn.MouseButton1Click:Connect(function()
     if screenGui then screenGui:Destroy() end
 end)
 
-
 local miniBtn = Instance.new("TextButton", frame)
 miniBtn.Size = UDim2.new(0,30,0,30)
 miniBtn.Position = UDim2.new(1,-30,0,0)
 miniBtn.Text = "—"
-miniBtn.BackgroundColor3 = Color3.fromRGB(80,80,200)
+miniBtn.BackgroundColor3 = Color3.fromRGB(50,50,50) -- dark grey
 miniBtn.TextColor3 = Color3.fromRGB(255,255,255)
 miniBtn.Font = Enum.Font.GothamBold
 miniBtn.TextScaled = true
@@ -6845,8 +6843,8 @@ Instance.new("UICorner", miniBtn).CornerRadius = UDim.new(0,8)
 local bubbleBtn = Instance.new("TextButton", screenGui)
 bubbleBtn.Size = UDim2.new(0,80,0,46)
 bubbleBtn.Position = UDim2.new(0,20,0.7,0)
-bubbleBtn.Text = "WataX"
-bubbleBtn.BackgroundColor3 = Color3.fromRGB(0,140,220)
+bubbleBtn.Text = "SUCKARDY"
+bubbleBtn.BackgroundColor3 = Color3.fromRGB(30,30,30) -- dark
 bubbleBtn.TextColor3 = Color3.fromRGB(255,255,255)
 bubbleBtn.Font = Enum.Font.GothamBold
 bubbleBtn.TextScaled = true
@@ -6863,23 +6861,6 @@ bubbleBtn.MouseButton1Click:Connect(function()
     frame.Visible = true
     bubbleBtn.Visible = false
 end)
-
-
-local discordBtn = Instance.new("TextButton", frame)
-discordBtn.Size = UDim2.new(0,100,0,30)
-discordBtn.AnchorPoint = Vector2.new(0,1)
-discordBtn.Position = UDim2.new(0,5,1,-5)
-discordBtn.Text = "Discord"
-discordBtn.BackgroundColor3 = Color3.fromRGB(90,90,220)
-discordBtn.TextColor3 = Color3.fromRGB(255,255,255)
-discordBtn.Font = Enum.Font.GothamBold
-discordBtn.TextScaled = true
-Instance.new("UICorner", discordBtn).CornerRadius = UDim.new(0,8)
-
-
-discordBtn.Size = UDim2.new(0,100,0,30)
-discordBtn.AnchorPoint = Vector2.new(0,1)
-discordBtn.Position = UDim2.new(0,5,1,-5)
 
 local speedRow = Instance.new("Frame", frame)
 speedRow.Size = UDim2.new(0,160,0,30)
@@ -6900,7 +6881,7 @@ local speedDown = Instance.new("TextButton", speedRow)
 speedDown.Size = UDim2.new(0,40,1,0)
 speedDown.Position = UDim2.new(0,65,0,0)
 speedDown.Text = "–"
-speedDown.BackgroundColor3 = Color3.fromRGB(60,60,100)
+speedDown.BackgroundColor3 = Color3.fromRGB(40,40,40)
 speedDown.TextColor3 = Color3.fromRGB(255,255,255)
 Instance.new("UICorner", speedDown).CornerRadius = UDim.new(0,8)
 
@@ -6908,7 +6889,7 @@ local speedUp = Instance.new("TextButton", speedRow)
 speedUp.Size = UDim2.new(0,40,1,0)
 speedUp.Position = UDim2.new(0,110,0,0)
 speedUp.Text = "+"
-speedUp.BackgroundColor3 = Color3.fromRGB(60,60,100)
+speedUp.BackgroundColor3 = Color3.fromRGB(40,40,40)
 speedUp.TextColor3 = Color3.fromRGB(255,255,255)
 Instance.new("UICorner", speedUp).CornerRadius = UDim.new(0,8)
 
@@ -6924,10 +6905,3 @@ speedUp.MouseButton1Click:Connect(function()
         speedValue.Text = string.format("%.2fx", playbackRate)
     end
 end)
-
-discordBtn.MouseButton1Click:Connect(function()
-    if setclipboard then
-        setclipboard("https://discord.gg/tfNqRQsqHK")
-    end
-end)
-
